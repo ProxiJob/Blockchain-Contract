@@ -51,7 +51,7 @@ function getContractInDB(name) {
 }
 
 function getContractInIPFS(hash) {
-  ipfs.files.cat('/ipfs/QmRbf6WxUAsin1PKPbhuQ9uTKA2LybqAAe4UJB2yndf8BL', function (err, file) {
+  ipfs.files.cat('/ipfs/' + hash, function (err, file) {
     if (err) {
       throw err
     }  
