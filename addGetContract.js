@@ -15,10 +15,9 @@ var contract = new Contract();
 
 
 function addContractInIPFS(file, name) {
-  console.log("ici");
   ipfs.util.addFromFs(file, {}, (err, result) => {
     if (err) { throw err }
-    //console.log(result[0].hash);
+    console.log(result[0].hash);
     addContractInDB(result[0].hash, name);
   });
 }
@@ -56,13 +55,10 @@ function getContractInIPFS(hash) {
       throw err
     }  
     console.log(file.toString('utf8'))
-  })
-  
+  })  
 }
 
-//id = addContractInIPFS("tmp/toto.txt", "contract");
-//console.log(id);
-getContractInDB("contract");
+//id = addContractInIPFS("mail.pdf", "contractmail");
 
-/*
-*/
+getContractInDB("contractmail");
+
