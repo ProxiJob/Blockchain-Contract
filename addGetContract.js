@@ -6,7 +6,8 @@ Parse.serverURL = 'https://proxijob.herokuapp.com/parse'
 
 /***** Init IPFS API *****/
 var ipfsAPI = require('ipfs-api')
-var ipfs = ipfsAPI({host: 'localhost', port: '5001', protocol: 'http'})
+var ipfs = ipfsAPI('ipfs.infura.io', '5001', {protocol: 'https'});
+//var ipfs = ipfsAPI({host: 'localhost', port: '5001', protocol: 'http'})
 const bitswap = require('ipfs-api/src/bitswap')('/ip4/127.0.0.1/tcp/5001')
 
 /***** Init Object Bdd *****/
@@ -58,7 +59,9 @@ function getContractInIPFS(hash) {
   })  
 }
 
-//id = addContractInIPFS("mail.pdf", "contractmail");
+//id = addContractInIPFS("tmp/toto.txt", "contractmail");
 
-getContractInDB("contractmail");
+//getContractInDB("QmRbf6WxUAsin1PKPbhuQ9uTKA2LybqAAe4UJB2yndf8BL");
 
+
+getContractInIPFS("QmRbf6WxUAsin1PKPbhuQ9uTKA2LybqAAe4UJB2yndf8BL");
