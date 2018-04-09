@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ProxyJob/Application-Blockchain#readme",
   "dependencies": {
+    "file-base64": "^1.0.0",
     "ipfs": "^0.28.0",
     "jQuery": "^1.7.4",
     "jquery": "^3.3.1",
